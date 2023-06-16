@@ -7,86 +7,71 @@
             "role": "Admin",
             "phoneNumber": "123-456-7777",
             "address": "123 Example Street, City, State, ZIP"
-          },
-          {
-            "id": 2,
-            "email": "test@mail.com",
-            "password": "123456",
-            "role": "Admin",
-            "phoneNumber": "123-456-8888",
-            "address": "456 Example Street, City, State, ZIP"
-          },
-           {
-            "id": 3,
-            "email": "user@mail.com",
-            "password": "123456",
-            "role": "User",
-            "phoneNumber": "123-456-9999",
-            "address": "789 Example Street, City, State, ZIP"
           }
+
     ],
     "Post": [
         {   
-        "id": 1,
-        "title": "Example Post",
-        "slug": "example-post",
-        "content": "This is an example post content.",
-        "imgUrl": "https://example.com/image.jpg",
-        "categoryId": 2,
-        "authorId": 2
-        },
-        {   
-        "id": 2,
-        "title": "Far Far away",
-        "slug": "far-far-away",
-        "content": "there is a kingdom in the far far away land",
-        "imgUrl": "https://example.com/image.jpg",
-        "categoryId": 3,
-        "authorId": 3
-        },
-        {   
-        "id": 3,
-        "title": "Far Far away",
-        "slug": "far-far-away",
-        "content": "there is a kingdom in the far far away land",
-        "imgUrl": "https://example.com/image.jpg",
-        "categoryId": 1,
-        "authorId": 1
-        },
-        {   
-        "id": 4,
-        "title": "True Grit",
-        "slug": "true-grit",
-        "content": "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
-        "imgUrl": "http://dummyimage.com/173x100.png/dddddd/000000",
-        "categoryId": 2,
-        "authorId": 3
-        },
-        {   
-        "id": 5,
-        "title": "Salaam Cinema",
-        "slug": "salaam-cinema",
-        "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.",
-        "imgUrl": "http://dummyimage.com/138x100.png/cc0000/ffffff",
-        "categoryId": 2,
-        "authorId": 2
-        },
-        {   
-        "id": 6,
-        "title": "The Puzzle",
-        "slug": "the-puzzle",
-        "content": "Fusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
-        "imgUrl": "http://dummyimage.com/190x100.png/cc0000/ffffff",
-        "categoryId": 3,
-        "authorId": 3
-        },
-        {   
-          "id": 7,
-          "title": "Armless",
-          "slug": "armless",
-          "content": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
-          "imgUrl": "http://dummyimage.com/227x100.png/cc0000/ffffff",
+          "id": 1,
+          "title": "Rusia Terus Gempur Ukraina, 3 Orang Tewas di Odesa",
+          "slug": "rusia-terus-gempur-ukraina-3-orang-tewas-di-odesa",
+          "content": "Pasukan Rusia menembakkan empat rudal Kalibr dari sebuah kapal di Laut Hitam, setidaknya 3 orang tewas",
+          "imgUrl": "https://news.detik.com/internasional/d-6772176/rusia-terus-gempur-ukraina-3-orang-tewas-di-odesa", 
           "categoryId": 1,
+          "authorId": 1
+        },
+        {   
+          "id": 2,
+          "title": "KPK Selidiki Kasus Dugaan Korupsi di Kementerian Pertanian",
+          "slug": "kpk-selidiki-kasus-dugaan-korupsi-di-kementerian-pertanian",
+          "content": "KPK ternyata sedang menyelidiki kasus dugaan korupsi di Kementerian Pertanian (Kementan). KPK sudah meminta keterangan sejumlah orang terkait kasus di kementerian yang saat ini dipimpin Syahrul Yasin Limpo itu",
+          "imgUrl": "https://news.detik.com/berita/d-6772165/kpk-selidiki-kasus-dugaan-korupsi-di-kementerian-pertanian", 
+          "categoryId": 1,
+          "authorId": 1
+        },
+        {   
+          "id": 3,
+          "title": "Putin Pertimbangkan Kembali Lancarkan Serangan Rebut Ibu Kota Ukraina",
+          "slug": "putin-pertimbangkan-kembali-lancarkan-serangan-rebut-ibu-kota-ukraina",
+          "content": "Presiden Rusia Vladimir Putin tampaknya tengah mempertimbangkan untuk kembali melancarkan serangan guna merebut Kiev, ibu kota Ukraina. Pasukan militer Moskow telah gagal merebut dan menguasai ibu kota Ukraina itu pada awal-awal invasi setahun lalu",
+          "imgUrl": "https://news.detik.com/internasional/d-6771987/putin-pertimbangkan-kembali-lancarkan-serangan-rebut-ibu-kota-ukraina", 
+          "categoryId": 1,
+          "authorId": 1
+        },
+        {   
+          "id":4,
+          "title": "Bertambah, Jumlah Jemaah Haji Wafat Capai 58 Orang",
+          "slug": "bertambah-jumlah-jemaah-haji-wafat-capai-58-orang",
+          "content": "Kementerian Agama (Kemenag) melaporkan, jumlah jemaah haji meninggal dunia di Arab Saudi bertambah 4 orang, sehingga totalnya mencapai 58 orang hingga 13 Juni 2023",
+          "imgUrl": "https://nasional.kompas.com/read/2023/06/14/14594241/bertambah-jumlah-jemaah-haji-wafat-capai-58-orang", 
+          "categoryId": 2,
+          "authorId": 1
+        },
+        {   
+          "id":5,
+          "title": "Mario Dandy Keberatan Jonathan Latumahina Sebut Rafael Alun Ikut Atur soal Hukuman, Ayah David Ozora: Noh, Lawyer Shane Ngomong Juga",
+          "slug": "mario-dandy-keberatan-jonathan-latumahina-sebut-rafael-alun-ikut-atur-soal-hukuman-ayah-david-ozora-noh-lawyer-shane-ngomong-juga",
+          "content": "Jonathan Latumahina, sempat menyebutkan bahwa ia mendengar bahwa Mario Dandy menjanjikan kepada kedua rekannya, Shane Lukas dan AG untuk tenang karena ayahnya, Rafael Alun Trisambodo (RAT) bakal menjamin hukuman ringan kepada mereka",
+          "imgUrl": "https://www.liputan6.com/showbiz/read/5318912/mario-dandy-keberatan-jonathan-latumahina-sebut-rafael-alun-ikut-atur-soal-hukuman-ayah-david-ozora-noh-lawyer-shane-ngomong-juga", 
+          "categoryId": 2,
+          "authorId": 1
+        },
+        {   
+          "id":6,
+          "title": "Putri Ariani Cerita Sering Di-bully hingga Tak Punya Teman karena Penyandang Disabilitas",
+          "slug": "putri-ariani-cerita-sering-di-bully-hingga-tak-punya-teman-karena-penyandang-disabilitas",
+          "content": "Putri Ariani merupakan penyandang tunanetra total. Dia tak bisa melihat sejak bayi karena lahir di usia prematur. Kondisi ini membuatnya sering kali dirundung oleh teman-temannya dari kecil, bahkan hingga saat ini",
+          "imgUrl": "https://www.liputan6.com/showbiz/read/5318686/putri-ariani-cerita-sering-di-bully-hingga-tak-punya-teman-karena-penyandang-disabilitas", 
+          "categoryId": 3,
+          "authorId": 1
+        },
+        {   
+          "id":7,
+          "title": "Organ Park Soo Ryun Didonorkan, Orangtuanya Merasa Tenang karena Jantung Mendiang Tetap Berdetak untuk Orang yang Membutuhkan",
+          "slug": "organ-park-soo-ryun-didonorkan-orangtuanya-merasa-tenang-karena-jantung-mendiang-tetap-berdetak-untuk-orang-yang-membutuhkan",
+          "content": "Kepergian aktris Korea Selatan Park Soo Ryun untuk selamanya secara mendadak, tak hanya memicu kesedihan di benak publik. Namun juga rasa haru. Terutama atas keputusan orangtua mendiang yang mengambil langkah mendonorkan organ sang anak",
+          "imgUrl": "https://www.liputan6.com/showbiz/read/5317628/organ-park-soo-ryun-didonorkan-orangtuanya-merasa-tenang-karena-jantung-mendiang-tetap-berdetak-untuk-orang-yang-membutuhkan", 
+          "categoryId": 3,
           "authorId": 1
           }
     ],
@@ -108,17 +93,17 @@
         {
         "id": 1,
         "postId":1,
-        "name": "tech"
+        "name": "Rusia"
         },
         {
         "id": 2,
-        "postId":2,
-        "name": "finance"
+        "postId":3,
+        "name": "Putin"
         },
         {
         "id": 3,
-        "postId":3,
-        "name": "sport"
+        "postId":5,
+        "name": "Mario"
         }
     ]
   }
