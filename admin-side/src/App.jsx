@@ -1,19 +1,19 @@
-import { useState } from 'react'
 import './App.css'
-import Navbar from './components/Navbar'
-import Form from './components/Form'
-import Table from './components/Table'
+import { RouterProvider } from 'react-router-dom'
+// import { Provider } from 'react-redux';
+import router from './routes';
+
 
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
     <div>
-    <Navbar/>
-    <Form/>
-    <Table/>
+  
+        <RouterProvider router={router} />
+   
     </div>
     
     </>
