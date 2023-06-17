@@ -3,6 +3,10 @@ module.exports = (error, req, res, next) => {
   let status = 500;
 
   switch (error.name) {
+    case "tagsRequired":
+      status = 400;
+      message = "Input the Tags";
+      break;
     case "categoryRequired":
       status = 400;
       message = "Input the category";
