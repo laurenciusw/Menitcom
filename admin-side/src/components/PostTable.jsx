@@ -1,4 +1,4 @@
-export default function Table(){
+export default function PostTable(){
     return(
         <>
 <div class="md:px-32 py-8 w-full">
