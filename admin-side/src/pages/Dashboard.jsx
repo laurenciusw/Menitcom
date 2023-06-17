@@ -45,6 +45,11 @@ export default function Dashboard() {
     show();
   };
 
+//   editpost
+const handleEdit =(post)=>{
+    setPostForm(post)
+}
+
   if (loading) {
     return (
       <>
@@ -93,7 +98,7 @@ export default function Dashboard() {
             </thead>
             <tbody className="text-gray-700">
               {data.map((post, index) => (
-                <PostTable key={post.id} index={index} post={post} />
+                <PostTable key={post.id} index={index} post={post} handleEdit={handleEdit} show={show} />
               ))}
             </tbody>
           </table>

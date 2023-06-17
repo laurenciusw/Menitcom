@@ -3,7 +3,7 @@ import { deletePost } from '../store/actions/postAction';
 
 
 
-export default function PostTable({post,index}){
+export default function PostTable({post,index,handleEdit, show }){
   const dispatch = useDispatch();
 
   const handleDelete = (id) => {
@@ -32,6 +32,10 @@ export default function PostTable({post,index}){
         <div className="flex justify-center items-center">
             <button
               className="bg-black text-white m-1 px-2 py-1 hover:bg-gray-800"
+              onClick={()=>{
+                handleEdit(post)
+                show()
+              }}
             >
               EDIT
             </button>

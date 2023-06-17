@@ -89,3 +89,28 @@ export function deletePost(id) {
     }
   };
 }
+
+// edit
+export function editPost(postForm) {
+  return async (dispatch) => {
+    try {
+      const response = await fetch(baseUrl + "/posts/" + postForm.id, {
+        method: "PUT",
+        headers: {
+          access_token: localStorage.getItem("access_token"),
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(postForm),
+      });
+
+      if (!response.ok) {
+        const errorResponse = await response.json();
+        throw new Error(errorResponse.message);
+      }
+      const data = await response.json();
+      dispatch(fetchPosts());
+    } catch (error) {
+      throw error;
+    }
+  };
+}
