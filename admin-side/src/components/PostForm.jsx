@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { newPost } from "../store/actions/postAction";
+import { editPost, newPost } from "../store/actions/postAction";
+
 
 export default function PostForm(props) {
   const dispatch = useDispatch();
@@ -61,14 +62,24 @@ export default function PostForm(props) {
   // Handle submit
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(newPost(postForm))
-      .then(() => {
-        onClose();
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
+    if (!postForm.id) {
+      dispatch(newPost(postForm))
+        .then(() => {
+          onClose();
+        })
+        .catch((error) => {
+          console.log(error)
+        });
+    } else {
+      dispatch(editPost(postForm))
+        .then(() => {
+          onClose();
+        })
+        .catch((error) => {
+          console.log(error)
+        });
+    }
+  };;
 
   return (
     <>
