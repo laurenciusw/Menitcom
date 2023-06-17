@@ -25,6 +25,7 @@ export function FetchPostsFailure(error) {
   };
 }
 
+//fetch
 export function fetchPosts() {
   return async (dispatch) => {
     dispatch(FetchPostsRequest());
@@ -34,6 +35,55 @@ export function fetchPosts() {
 
       const data = await response.json();
       dispatch(FetchPostsSuccess(data));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+}
+
+//create post
+export function newPost(postForm) {
+  return async (dispatch) => {
+    try {
+      const response = await fetch(baseUrl + "/posts", {
+        method: "POST",
+        headers: {
+          access_token: localStorage.getItem("access_token"),
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(postForm),
+      });
+
+      if (!response.ok) {
+        const errorResponse = await response.json();
+        throw new Error(errorResponse.message);
+      }
+      const data = await response.json();
+      dispatch(fetchPosts());
+    } catch (error) {
+      throw error;
+    }
+  };
+}
+
+//delete
+export function deletePost(id) {
+  return async (dispatch) => {
+    try {
+      const response = await fetch(baseUrl + `/posts/${id}`, {
+        method: "DELETE",
+        headers: {
+          access_token: localStorage.getItem("access_token"),
+          "content-type": "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        const errorResponse = await response.json();
+        throw new Error(errorResponse.message);
+      }
+
+      dispatch(fetchPosts());
     } catch (error) {
       console.log(error);
     }
