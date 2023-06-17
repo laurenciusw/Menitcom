@@ -1,9 +1,21 @@
 import { useSelector, useDispatch } from 'react-redux';
+import { deletePost } from '../store/actions/postAction';
+
 
 
 export default function PostTable({post,index}){
+  const dispatch = useDispatch();
 
-  
+  const handleDelete = (id) => {
+        dispatch(deletePost(id))
+          .then(() => {
+            console.log("berhasil delete")
+          })
+          .catch((error) => {
+            console.log(error)
+          });
+      
+  };
     return(
         <>
 
@@ -23,7 +35,7 @@ export default function PostTable({post,index}){
             >
               EDIT
             </button>
-            <button className="bg-red-500 text-white m-1 px-2 py-1 hover:bg-red-400">
+            <button className="bg-red-500 text-white m-1 px-2 py-1 hover:bg-red-400"onClick={() => handleDelete(post.id)} >
               DELETE
             </button>
           </div>
