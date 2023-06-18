@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux'
 import { register } from "../store/actions/userAction";
-
+import { showError } from "../hooks/swalModal";
 
 export default function RegisterPage() {
     const dispatch = useDispatch()
@@ -38,7 +38,7 @@ export default function RegisterPage() {
             });
           })
           .catch((error) => {
-            console.log(error)
+            showError(error)
           });
       };
   return (

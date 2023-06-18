@@ -36,7 +36,7 @@ export function fetchCategories() {
       const data = await response.json();
       dispatch(FetchCategoriesSuccess(data));
     } catch (error) {
-      console.log(error);
+      throw error;
     }
   };
 }
@@ -60,7 +60,7 @@ export function newCategory(name) {
 
       dispatch(fetchCategories());
     } catch (error) {
-      console.log(error);
+      throw error;
     }
   };
 }
@@ -84,7 +84,7 @@ export function categoryEdit(category) {
 
       dispatch(fetchCategories());
     } catch (error) {
-      console.log(error);
+      throw error;
     }
   };
 }
@@ -107,7 +107,7 @@ export function deleteCategory(id) {
 
       dispatch(fetchCategories());
     } catch (error) {
-      console.log(error);
+      throw error;
     }
   };
 }

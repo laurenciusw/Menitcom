@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { baseUrl } from "../store/baseUrl"
+import { showError } from "../hooks/swalModal";
+
 
 
 export default function LoginPage(){
@@ -38,7 +40,7 @@ export default function LoginPage(){
             navigate('/');
             
         } catch (error) {
-            console.log(error)
+            showError (error)
         }
     }
 
