@@ -41,6 +41,17 @@ export default function Category() {
     show()
   }
     
+
+  if (loading) {
+    return (
+      <>
+        <div>
+        <span className="loading loading-bars loading-lg"></span>
+        </div>
+      </>
+    );
+  }
+  
   return (
    <>
     <div>
