@@ -1,4 +1,4 @@
-export default function  MenuBar(){
+export default function  MenuBar({category}){
     return(
         <div>
         <div className="w-full">
@@ -14,22 +14,6 @@ export default function  MenuBar(){
         <li><a>menitHealth</a></li>
         <li><a>Wolipop</a></li>
         <li><a>30Menit</a></li>
-        </ul>
-        </div>
-
-        <div className="w-full">
-        <ul className="menu menu-vertical lg:menu-horizontal bg-slate-600  text-white flex w-full">
-        <li><a>Live Tv</a></li>
-        <li><a>Ads Smart</a></li>
-        <li><a>MenitX</a></li>
-        <li><a>Sepak Bola</a></li>
-        <li><a>Hikmah</a></li>
-        <li><a>Edukasi</a></li>
-        <li><a>Pemilu 2070</a></li>
-        <li><a>Emeron Hijab Hunt</a></li>
-        <li><a>Badminton</a></li>
-        <li><a>Bola Basket</a></li>
-        <li><a>Bola Voli</a></li>
         </ul>
         </div>
         </div>
