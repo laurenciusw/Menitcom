@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { editPost, newPost } from "../store/actions/postAction";
+import { showError } from "../hooks/swalModal";
+
 
 
 export default function PostForm(props) {
@@ -68,7 +70,7 @@ export default function PostForm(props) {
           onClose();
         })
         .catch((error) => {
-          console.log(error)
+          showError (error)
         });
     } else {
       dispatch(editPost(postForm))
@@ -76,7 +78,7 @@ export default function PostForm(props) {
           onClose();
         })
         .catch((error) => {
-          console.log(error)
+          showError (error)
         });
     }
   };;

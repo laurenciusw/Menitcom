@@ -2,6 +2,8 @@ import React from 'react'
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { categoryEdit, newCategory } from '../store/actions/categoryAction';
+import { showError } from '../hooks/swalModal';
+
 
 
 
@@ -29,7 +31,7 @@ export default function CategoryForm(props) {
           onClose();
         })
         .catch((error) => {
-          console.log(error)
+          showError (error)
         });
     } else {
       dispatch(categoryEdit(categoryForm))
@@ -37,7 +39,7 @@ export default function CategoryForm(props) {
           onClose();
         })
         .catch((error) => {
-          console.log(error)
+          showError (error)
         });
     }
   };

@@ -18,7 +18,7 @@ export function register(registerForm) {
       }
       const data = await response.json();
     } catch (error) {
-      console.log(error);
+      throw error;
     }
   };
 }
