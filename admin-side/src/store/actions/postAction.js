@@ -36,7 +36,7 @@ export function fetchPosts() {
       const data = await response.json();
       dispatch(FetchPostsSuccess(data));
     } catch (error) {
-      console.log(error);
+      dispatch(FetchPostsFailure(error.message));
     }
   };
 }

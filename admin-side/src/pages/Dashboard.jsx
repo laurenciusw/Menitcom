@@ -36,25 +36,25 @@ export default function Dashboard() {
   // add post
   const handleAdd = () => {
     setPostForm({
-      title: '',
-      content: '',
-      categoryId: '',
-      imgUrl: '',
+      title: "",
+      content: "",
+      categoryId: "",
+      imgUrl: "",
       tags: [],
     });
     show();
   };
 
-//   editpost
-const handleEdit =(post)=>{
-    setPostForm(post)
-}
+  //   editpost
+  const handleEdit = (post) => {
+    setPostForm(post);
+  };
 
   if (loading) {
     return (
       <>
         <div>
-        <span className="loading loading-bars loading-lg"></span>
+          <span className="loading loading-bars loading-lg"></span>
         </div>
       </>
     );
@@ -98,10 +98,29 @@ const handleEdit =(post)=>{
             </thead>
             <tbody className="text-gray-700">
               {data.map((post, index) => (
-                <PostTable key={post.id} index={index} post={post} handleEdit={handleEdit} show={show} />
+                <PostTable
+                  key={post.id}
+                  index={index}
+                  post={post}
+                  handleEdit={handleEdit}
+                  show={show}
+                />
               ))}
             </tbody>
           </table>
+          {loading && (
+            <div className="fixed flex items-center ml-8 justify-center  min-h-screen mx-auto w-3/4">
+              <span className="loading loading-bars loading-lg"></span>
+              <h1>loading...</h1>
+            </div>
+          )}
+          {error && (
+            <div className="fixed flex items-center ml-8 justify-center  min-h-screen mx-auto w-3/4">
+              <p className="text-black mb-40">
+                Something went wrong. Try to reload the page.
+              </p>
+            </div>
+          )}
         </div>
       </div>
       <div>

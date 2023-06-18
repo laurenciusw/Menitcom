@@ -1,55 +1,19 @@
-export  default function CardBar(){
+import { Link } from "react-router-dom"
+
+export  default function CardBar({post}){
     return(
-      <div className="columns-12 flex px-6 basis-0 flex-grow ">
+      <div className=" px-6 basis-0 w-5/6 grid-cols-6 flex justify-center">
         <div className="card w-96 bg-base-100 shadow-xl m-4">
-        <figure><img src="https://dummyimage.com/600x400/000/fff" alt="Shoes" /></figure>
+        <figure><img src={post.imgUrl} alt="" /></figure>
         <div className="card-body">
           <h2 className="card-title">
-            Shoes!
+          <Link to={`/article/${post.id}/${post.slug}`}>{post.title}</Link>
           </h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
+  
         </div>
       </div>
 
-      <div className="card w-96 bg-base-100 shadow-xl m-4">
-        <figure><img src="https://dummyimage.com/600x400/000/fff" alt="Shoes" /></figure>
-        <div className="card-body">
-          <h2 className="card-title">
-            Shoes!
-          </h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-        </div>
-      </div>
-
-      <div className="card w-96 bg-base-100 shadow-xl m-4">
-        <figure><img src="https://dummyimage.com/600x400/000/fff" alt="Shoes" /></figure>
-        <div className="card-body">
-          <h2 className="card-title">
-            Shoes!
-          </h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-        </div>
-      </div>
-
-      <div className="card w-96 bg-base-100 shadow-xl m-4">
-        <figure><img src="https://dummyimage.com/600x400/000/fff" alt="Shoes" /></figure>
-        <div className="card-body">
-          <h2 className="card-title">
-            Shoes!
-          </h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-        </div>
-      </div>
-
-      <div className="card w-96 bg-base-100 shadow-xl m-4">
-        <figure><img src="https://dummyimage.com/600x400/000/fff" alt="Shoes" /></figure>
-        <div className="card-body">
-          <h2 className="card-title">
-            Shoes!
-          </h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-        </div>
-      </div>
+    
     
       </div>
     )
