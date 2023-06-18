@@ -30,12 +30,14 @@ export default function SideBar() {
             </span>
           </div>
           </Link>
-        
+
+            <Link to={'/register'}>
           <div className=" text-center cursor-pointer text-white mb-6 ">
             <span className="font-sans text-md font-semibold ">
               <span>Register Admin</span>
             </span>
           </div>
+          </Link>
         <hr />
 
         <div onClick={handleLogout} className=" text-center cursor-pointer text-white mb-6 ">

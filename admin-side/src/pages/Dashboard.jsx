@@ -54,7 +54,7 @@ const handleEdit =(post)=>{
     return (
       <>
         <div>
-          <h1>loading...</h1>
+        <span className="loading loading-bars loading-lg"></span>
         </div>
       </>
     );
