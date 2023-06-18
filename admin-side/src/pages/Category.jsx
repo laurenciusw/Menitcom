@@ -2,28 +2,58 @@ import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchCategories } from "../store/actions/categoryAction";
 
+
 import React from 'react'
 import CategoryTables from "../components/CategoryTables";
+import AddButton from "../components/AddButton";
+import CategoryForm from "../components/CategoryForm";
+import useModal from "../hooks/useModal";
+
 
 
 export default function Category() {
     const dispatch=useDispatch()
+    const { open, show, hide } = useModal(false);
 
     const data = useSelector((state) => state.category.categories);
     const loading = useSelector((state) => state.category.loading);
     const error = useSelector((state) => state.category.error);
 
+
   // use effect
   useEffect(() => {
     dispatch(fetchCategories());
-    
   }, []);
+
+  //category Form
+  const [categoryForm, setCategoryForm] = useState({
+    name: '',
+  });
+
+  const handleCategoryEdit = (category) => {
+    setCategoryForm(category)
+  };
+
+  const handleAdd = () => {
+    setCategoryForm({
+      name: ''
+    })
+    show()
+  }
     
   return (
    <>
+    <div>
+        <div className="flex justify-center">
+            <div onClick={handleAdd} >
+            <AddButton text="ADD NEW CATEGORY"/>
+            </div>
+        </div>
+    </div>
+
    <div className="md:px-32 py-8 w-8/12 align-middle">
         <div className="shadow overflow-hidden rounded border-b border-gray-200">
-          <table className="min-w-full bg-white">
+          <table className="w-full bg-white">
             <thead className="bg-gray-800 text-white">
               <tr>
                 <th className="w-10 text-left py-3 px-4 uppercase font-semibold text-sm">
@@ -39,11 +69,20 @@ export default function Category() {
             </thead>
             <tbody className="text-gray-700"> 
             {data.map((category, index) => (
-              <CategoryTables key={category.id} index={index} category={category} />
+              <CategoryTables key={category.id} index={index} category={category}  show={show}
+              onEdit={handleCategoryEdit} />
             ))}
             </tbody>
           </table>
         </div>
+      </div>
+      <div>
+        <CategoryForm
+          open={open}
+          onClose={hide}
+          setCategoryForm={setCategoryForm} categoryForm={categoryForm}
+          
+        />
       </div>
    </>
   )

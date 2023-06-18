@@ -1,7 +1,7 @@
 export default function AddButton({text}) {
     return (
         <>
-             <button className='text-white bg-black mg p-3 mb-4'>{text}</button>
+             <button className='text-white bg-sky-900 mg p-1 mb-3'>{text}</button>
         </>
     )
 }
